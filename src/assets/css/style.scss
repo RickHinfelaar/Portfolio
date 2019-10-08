@@ -1,0 +1,98 @@
+$primary-color: #DEF2F1;
+$secondary-background-color: #3AAFA9;
+
+$primary-text-color: #373737;
+
+$grey: rgba(0,0,0,0.75);
+
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.2s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+  overflow: hidden;
+  transition-property: height, opacity;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
+}
+
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  color: $primary-text-color;
+  background-color: $primary-color;
+  text-align: center;
+  margin: 0 auto;
+  scroll-behavior: smooth;
+  padding: 24px;
+}
+
+.jumbotron {
+    margin-top: 32px;
+    color: $primary-text-color;
+    background-color: $secondary-background-color;
+}
+
+.card {
+   margin: 8px 8px;
+   box-shadow: 2px 7px 12px -5px $grey;
+   border: 1px solid $grey;
+   transition: .4s;
+   height: 60px;
+   &:hover{
+     box-shadow: 4px 14px 25px -11px $grey;
+     transform: scale(1.05);
+     z-index: 100;
+   }
+   &:active {
+     transform: scale(1.1);
+     z-index: 100;
+   }
+}
+
+.card-title {
+  position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: none;
+
+  &:hover {
+    color: black;
+  }
+}
+
+
+
+.nav {
+  background-color: $secondary-background-color;
+  .card-title {
+    color: $primary-color;
+    font-size: 36px
+  }
+}
+
+.skill {
+   background-color: $primary-color;
+}
+
+.project {
+   height: 120px;
+  .card-title {
+       color: $primary-text-color;
+     }
+}
+
+  p {
+    font-size: 32px;
+    padding-top: 32px;
+    color: $primary-text-color;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
